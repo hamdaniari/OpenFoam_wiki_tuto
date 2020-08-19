@@ -36,17 +36,29 @@ protected:
 public:
     int i_; //member data (underscore is OpenFOAM convention)
     float j_;
-    myClass()
-    {
-      cout << "i_ = " << i_ << endl;
-    }
-    ~myClass()
-    {};
+    myClass();
+    ~myClass();
 };
+
+myClass::myClass()
+:
+i_(20)
+j_(21.5)
+{
+    cout << "i_ = " << i_ << endl;
+}
+myClass::~myClass()
+{}
 
 int main()
 {
-    myClass myClassObject;
-    cout << "myClassObject.i_: " << myClassObject.i_ << endl;
-    return 0;
+  myClass myClassObject;
+  cout << "myClassObject.i_: " << myClassObject.i_ << endl;
+  cout << "myClassObject.j_: " << myClassObject.j_ << endl;
+  myClass myClassObject2;
+  cout<< "myClassObject2.i_: " << myClassObject2.i_ << endl;
+  myClassObject2.i_=30
+  cout << "myClassObject.i_: " << myClassObject.i << endl;
+  cout << "myClassObject2.i_: " << myClassObject2.i_ << endl;
+  return 0;
 }
