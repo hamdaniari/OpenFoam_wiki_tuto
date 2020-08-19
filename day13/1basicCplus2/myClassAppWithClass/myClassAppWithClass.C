@@ -35,6 +35,12 @@ private:
 protected:
 public:
     int i_=19; //member data (underscore is OpenFOAM convention)
+    myClass()
+    {
+      cout << "i_ = " << i_ << endl;
+    }
+    ~myClass()
+    {};
 };
 
 int main()
