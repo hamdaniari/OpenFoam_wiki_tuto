@@ -14,3 +14,5 @@ symmTensor st1(1,2,3,4,5,6);
 cout << "st1[5]: " << st1[5] << endl;
 return 0;
 }
+
+//g++ -std=c++0x basic8.C -DWM_DP -DWM_LABEL_SIZE=32 -I$FOAM_SRC/OpenFOAM/lnInclude -L$FOAM_LIBBIN/libOpenFOAM.so -o basic8; ./basic8
